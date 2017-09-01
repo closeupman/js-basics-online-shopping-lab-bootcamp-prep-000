@@ -72,7 +72,7 @@ function removeFromCart(item) {
   for(let i=0;i<cart.length;i++) {
     // get the key, i.e. the 'name of the fruit'
     let currentKey = Object.keys(cart[i])[0];
-    // if the fruit's name and the item name are the same 
+    // if the fruit's name and the item name are the same
     // then remove it.
     if (currentKey === item) {
       let index = cart.indexOf(cart[i])
@@ -91,4 +91,13 @@ function removeFromCart(item) {
 
 function placeOrder(cardNumber) {
   // write your code here
+  if (!cardNumber) {
+    console.log('Sorry, we don\'t have a credit card on file for you.');
+  } 
+  else {
+    message = 'Your total cost is $';
+    message += total();
+    message += ', which will be charged to the card ';
+    message += cardNumber+'.';
+  }
 }
