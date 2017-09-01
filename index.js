@@ -24,12 +24,15 @@ function addToCart(item) {
 }
 
 function viewCart() {
-  let message = '';
   // write your code here
+  let message = '';
+
   if (cart.length == 0) {
     console.log('Your shopping cart is empty.');
   } else {
     if (cart.length == 1) { // cart has 1 item
+      //each item of the array is an Object, so we can call Object.keys on it,
+      //but NOT on the cart array as a whole.
       let key0 = Object.keys(cart[0])[0];
       message += `In your cart, you have ${key0} at $${cart[0][key0]}.`;
     } else if (cart.length == 2) { // cart has 2 items
@@ -55,6 +58,7 @@ function viewCart() {
 
 function total() {
   // write your code here
+  return cart.length;
 }
 
 function removeFromCart(item) {
