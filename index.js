@@ -68,8 +68,12 @@ function total() {
 
 function removeFromCart(item) {
   // write your code here
+  // find the item in the cart and remove it
   for(let i=0;i<cart.length;i++) {
+    // get the key, i.e. the 'name of the fruit'
     let currentKey = Object.keys(cart[i])[0];
+    // if the fruit's name and the item name are the same 
+    // then remove it.
     if (currentKey === item) {
       let index = cart.indexOf(cart[i])
       if (index > -1) {
@@ -78,6 +82,9 @@ function removeFromCart(item) {
       }
     }
   } // end of FOR loop
+
+  //if we execute this code, it means
+  //we couldn't find the item in the cart
   console.log('That item is not in your cart.');
   return cart;
 }
