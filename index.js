@@ -72,8 +72,10 @@ function removeFromCart(item) {
     let currentKey = Object.keys(cart[i])[0];
     if (currentKey === item) {
       let index = cart.indexOf(cart[i])
-      cart.splice(i,1);
-      return cart;
+      if (index > -1) {
+        cart.splice(i,1);
+        return cart;
+      }
     }
   } // end of FOR loop
   console.log('That item is not in your cart.');
