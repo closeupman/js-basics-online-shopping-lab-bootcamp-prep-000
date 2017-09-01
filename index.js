@@ -71,7 +71,7 @@ function removeFromCart(item) {
   for(let i=0;i<cart.length;i++) {
     let currentKey = Object.keys(cart[i])[0];
     if (currentKey === item) {
-      delete cart[i][currentKey];
+      cart.slice(i,1);
       return cart;
     }
   } // end of FOR loop
