@@ -93,7 +93,7 @@ function placeOrder(cardNumber) {
   // write your code here
   if (!cardNumber) {
     console.log('Sorry, we don\'t have a credit card on file for you.');
-  }
+  } 
   else {
     message = 'Your total cost is $';
     message += total();
@@ -101,3 +101,5 @@ function placeOrder(cardNumber) {
     message += cardNumber+'.';
   }
 }
+cart=[];
+return cart;
