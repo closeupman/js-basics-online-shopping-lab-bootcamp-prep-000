@@ -68,6 +68,15 @@ function total() {
 
 function removeFromCart(item) {
   // write your code here
+  for(let i=0;i<cart.length;i++) {
+    let currentKey = Object.keys(cart[i])[0];
+    if (currentKey === item) {
+      delete cart[i][currentKey];
+      return cart;
+    }
+  } // end of FOR loop
+  console.log('That item is not in your cart.');
+  return cart;
 }
 
 function placeOrder(cardNumber) {
