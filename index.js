@@ -37,7 +37,7 @@ function viewCart() {
       let key1 = Object.keys(cart[1])[0];
       message += `In your cart, you have ${key0} at $${cart[0][key0]} and ${key1} at $${cart[1][key1]}.`;
     } else {
-      message += 'In your cart you have ';
+      message += 'In your cart, you have ';
       for (let i=0; i < cart.length; i++) {
         let currentKey = Object.keys(cart[i])[0];
 
